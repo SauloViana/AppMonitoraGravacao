@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context="br.com.monitoragravacaoradio.GravacaoActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6d6d6">
+
+    <TextSwitcher
+        android:id="@+id/gravacao_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="50dp"/>
+
+    <LinearLayout
+        android:id="@+id/activity_gravacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:orientation="vertical">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/recording_tape_1"
+            android:id="@+id/gravacao_gif_gravando" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="39dp"
+            android:stretchColumns="2"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="65dp">
+
+            <TableRow
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arquivo: "
+                    android:gravity="right"/>
+                <TextView
+                    android:id="@+id/gravacao_filename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data: "
+                    android:gravity="right"/>
+                <TextView
+                    android:id="@+id/gravacao_date_modification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+
+            <TableRow
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caminho: "
+                    android:gravity="right"/>
+                <TextView
+                    android:id="@+id/gravacao_filepath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"/>
+            </TableRow>
+
+            <TableRow
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tamanho: "
+                    android:gravity="right"/>
+                <TextView
+                    android:id="@+id/gravacao_filesize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/gravacao_btn_inicia_monitoramento"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Iniciar Monitoramento"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>
